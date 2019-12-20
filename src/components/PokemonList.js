@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Pokemon";
+import Pokemon from "./Pokemon";
 
 function PokemonList() {
   return (
