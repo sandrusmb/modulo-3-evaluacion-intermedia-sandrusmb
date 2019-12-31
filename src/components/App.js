@@ -5,15 +5,33 @@ import PokemonList from "./PokemonList";
 import api from "../api/data.json";
 import Pokemon from "./Pokemon";
 
+/* class App extends React.Component {
+  constructor() {
+    super();
+    this.state = { data: api }
+  }
+
+  render() {
+    return (
+      <div>
+        <Header />
+        <PokemonList>
+          {this.state.data.map(pokemon => {
+            return <Pokemon image={pokemon.url} name={pokemon.name} types={pokemon.types} />;
+          })}
+        </PokemonList>
+      </div>
+    );
+  }
+}
+
+export default App; */
+
 function App() {
   return (
     <div>
       <Header />
-      <PokemonList>
-        {api.map(api => {
-          return <Pokemon image={api.url} name={api.name} types={api.types} />;
-        })}
-      </PokemonList>
+      <PokemonList data={api} />
     </div>
   );
 }
