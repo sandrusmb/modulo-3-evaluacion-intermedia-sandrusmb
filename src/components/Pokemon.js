@@ -31,15 +31,13 @@ export default Pokemon; */
 function Pokemon(props) {
   console.log(props);
   return (
-    <li>
-      <p>{props.name}</p>
-      <img src={props.image} alt={props.name} />
-      <p>{props.types}</p>
-      <ul>
+    <li className="card">
+      <p className="name">{props.name}</p>
+      <img className="image" src={props.image} alt={props.name} />
+      {/* <p>{props.types}</p> */}
+      <ul className="type-container">
         {props.types.map(type => {
-          return (
-            <li>{type}</li>
-          )
+          return <li className="type-detail">{type}</li>;
         })}
       </ul>
     </li>
@@ -47,4 +45,3 @@ function Pokemon(props) {
 }
 
 export default Pokemon;
-
